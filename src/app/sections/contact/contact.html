@@ -1,0 +1,58 @@
+<section id="contact" class="py-28 bg-zinc-950 text-white border-t border-white/10">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div data-aos="fade-up" class="mb-16">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Let's Work Together</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-14">
+
+      <!-- Info -->
+      <div data-aos="fade-right">
+        <h3 class="text-2xl font-bold font-syne mb-4">Open to Angular internships and junior frontend roles.</h3>
+        <p class="text-gray-400 leading-8 mb-8">I'm actively seeking opportunities to contribute to Angular projects — remote or onsite. If you're building something interesting, I'd love to hear about it.</p>
+
+        <div class="space-y-3">
+          @for (link of contactLinks; track link.label) {
+            <a [href]="link.href" [target]="link.external ? '_blank' : '_self'"
+               class="flex items-center gap-4 p-4 rounded-2xl glass-card hover:border-indigo-500/40 hover:translate-x-1 transition-all duration-200">
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/15 flex items-center justify-center text-xl flex-shrink-0">{{ link.icon }}</div>
+              <div>
+                <div class="text-[10px] text-gray-600 uppercase tracking-widest font-mono mb-0.5">{{ link.type }}</div>
+                <div class="text-sm text-gray-300">{{ link.label }}</div>
+              </div>
+            </a>
+          }
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div data-aos="fade-left">
+        <div class="glass-card rounded-3xl p-8 space-y-5">
+          <div>
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="Jane Smith" [(ngModel)]="form.name">
+          </div>
+          <div>
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" placeholder="jane@company.com" [(ngModel)]="form.email">
+          </div>
+          <div>
+            <label class="form-label">Subject</label>
+            <input type="text" class="form-input" placeholder="Angular Internship Opportunity" [(ngModel)]="form.subject">
+          </div>
+          <div>
+            <label class="form-label">Message</label>
+            <textarea class="form-input min-h-[120px] resize-none" placeholder="Tell me about the opportunity..." [(ngModel)]="form.message"></textarea>
+          </div>
+          <button (click)="sendMessage()" class="w-full btn-glow py-4 rounded-2xl text-white font-semibold text-base"
+                  [class.opacity-70]="sent">
+            {{ sent ? 'Message Sent ✓' : 'Send Message →' }}
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

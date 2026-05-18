@@ -1,0 +1,46 @@
+<section id="about" class="py-28 bg-zinc-950 text-white border-t border-white/10">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div data-aos="fade-up" class="mb-16">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">Passionate About<br>Angular Engineering.</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-14 items-start">
+
+      <!-- Text -->
+      <div data-aos="fade-right" class="space-y-5">
+        <p class="text-gray-400 leading-8 text-[17px]">
+          I'm a Computer Science graduate from
+          <span class="text-white font-medium">Arab Open University (2025)</span> and a certified
+          <span class="text-indigo-400 font-medium">Angular Frontend Developer</span> from Route Academy.
+        </p>
+        <p class="text-gray-400 leading-8 text-[17px]">
+          I build production-grade single-page applications using <span class="text-white font-medium">Angular v21</span>,
+          TypeScript, and RxJS — with a focus on clean architecture, standalone components,
+          reactive forms, and real-world API integration.
+        </p>
+        <p class="text-gray-400 leading-8 text-[17px]">
+          Actively seeking <span class="text-indigo-400 font-medium">Angular internship</span> or
+          <span class="text-indigo-400 font-medium">junior frontend</span> roles — remote or onsite —
+          where I can contribute to high-impact products and grow within a strong engineering team.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-4">
+          <a href="#contact" class="btn-glow px-6 py-3 rounded-xl text-sm font-semibold text-white">Let's Connect →</a>
+          <a href="https://github.com/Abdallah11Mohamed" target="_blank" class="btn-ghost px-6 py-3 rounded-xl text-sm font-medium">View GitHub</a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div data-aos="fade-left" class="grid grid-cols-2 gap-5">
+        @for (stat of stats; track stat.label) {
+          <div class="glass-card p-8 rounded-3xl text-center group hover:-translate-y-1 transition-all duration-300">
+            <div class="text-4xl font-extrabold gradient-text font-syne mb-2">{{ stat.value }}</div>
+            <div class="text-gray-500 text-sm uppercase tracking-widest">{{ stat.label }}</div>
+          </div>
+        }
+      </div>
+
+    </div>
+  </div>
+</section>

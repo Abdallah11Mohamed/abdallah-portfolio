@@ -1,0 +1,137 @@
+<section id="cv" class="py-28 bg-black text-white border-t border-white/10">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div data-aos="fade-up" class="mb-16 text-center">
+      <p class="section-label mx-auto">Curriculum Vitae</p>
+      <h2 class="section-title">My Professional CV</h2>
+      <p class="text-gray-500 mt-4 text-lg max-w-lg mx-auto">ATS-optimized CV highlighting Angular expertise, real-world projects, and engineering skills.</p>
+      <a href="#cv-download"
+         class="inline-flex items-center gap-2 mt-6 btn-glow px-7 py-3.5 rounded-2xl text-white font-semibold"
+         onclick="window.print()">
+        📥 Download CV (PDF)
+      </a>
+    </div>
+
+    <!-- CV Card -->
+    <div data-aos="zoom-in" class="glass-card rounded-3xl overflow-hidden cv-card">
+
+      <!-- CV Header -->
+      <div class="bg-gradient-to-br from-indigo-950/80 to-zinc-950 px-10 py-10 border-b border-white/10">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div>
+            <h1 class="text-4xl font-extrabold font-syne text-white mb-1">Abdallah Mohamed Elgohary</h1>
+            <p class="text-indigo-400 font-medium tracking-wide text-lg mb-4">Angular Frontend Developer</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip text-xs">Angular v21</span>
+              <span class="skill-chip text-xs">TypeScript</span>
+              <span class="skill-chip text-xs">RxJS</span>
+              <span class="skill-chip text-xs">Open to Remote</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 text-sm text-gray-400 md:text-right">
+            <a href="mailto:leaderabdallah20@gmail.com" class="hover:text-indigo-400 transition">✉ leaderabdallah20&#64;gmail.com</a>
+            <a href="tel:+201272320465" class="hover:text-indigo-400 transition">📞 +20 127 232 0465</a>
+            <a href="https://www.linkedin.com/in/abdallah-mohamed-5814772a5" target="_blank" class="hover:text-indigo-400 transition">💼 LinkedIn Profile</a>
+            <a href="https://github.com/Abdallah11Mohamed" target="_blank" class="hover:text-indigo-400 transition">⌥ github.com/Abdallah11Mohamed</a>
+            <span class="text-gray-600">📍 Banha, Qalyubia, Egypt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CV Body -->
+      <div class="px-10 py-10 grid md:grid-cols-[1fr_240px] gap-10">
+
+        <!-- LEFT -->
+        <div class="space-y-10">
+
+          <!-- Summary -->
+          <div>
+            <h3 class="cv-section-title">Professional Summary</h3>
+            <p class="text-gray-400 leading-7 text-sm border-l-2 border-indigo-500 pl-4">
+              Results-driven Angular Frontend Developer with hands-on experience delivering scalable, component-driven SPAs using Angular v21, TypeScript, RxJS, and RESTful API integration. Demonstrated ability to architect features end-to-end — from reactive state management and JWT authentication to lazy-loaded routing and responsive UI — across five production-grade portfolio projects.
+            </p>
+          </div>
+
+          <!-- Projects -->
+          <div>
+            <h3 class="cv-section-title">Featured Projects</h3>
+            <div class="space-y-6">
+              @for (proj of cvProjects; track proj.name) {
+                <div class="border-l border-white/10 pl-4 hover:border-indigo-500/50 transition-colors">
+                  <div class="flex items-baseline justify-between gap-2 mb-1">
+                    <span class="font-semibold text-white text-sm">{{ proj.name }}</span>
+                    <a [href]="proj.github" target="_blank" class="text-xs text-indigo-400 hover:text-indigo-300 font-mono shrink-0">GitHub ↗</a>
+                  </div>
+                  <div class="text-xs text-indigo-400 font-mono mb-2">{{ proj.stack }}</div>
+                  <ul class="space-y-1">
+                    @for (point of proj.points; track point) {
+                      <li class="text-xs text-gray-400 pl-3 relative before:absolute before:left-0 before:top-[6px] before:w-1.5 before:h-1.5 before:rounded-full before:bg-indigo-500/50">
+                        {{ point }}
+                      </li>
+                    }
+                  </ul>
+                </div>
+              }
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="space-y-8">
+
+          <!-- Education -->
+          <div>
+            <h3 class="cv-section-title">Education</h3>
+            <div class="text-sm">
+              <div class="text-white font-semibold">Arab Open University</div>
+              <div class="text-gray-400">B.Sc. Computer Science</div>
+              <span class="inline-block mt-2 text-xs font-mono px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">Class of 2025</span>
+            </div>
+          </div>
+
+          <!-- Certification -->
+          <div>
+            <h3 class="cv-section-title">Certification</h3>
+            <div class="border border-emerald-500/25 bg-emerald-500/5 rounded-xl p-4 text-sm">
+              <div class="text-emerald-400 font-semibold">Frontend Angular Developer</div>
+              <div class="text-gray-400 text-xs mt-1">Route Academy · 2024</div>
+            </div>
+          </div>
+
+          <!-- Angular Skills -->
+          <div>
+            <h3 class="cv-section-title">Angular Skills</h3>
+            <div class="flex flex-wrap gap-1.5">
+              @for (s of angularSkills; track s) {
+                <span class="text-xs px-2.5 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300">{{ s }}</span>
+              }
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div>
+            <h3 class="cv-section-title">Tools</h3>
+            <div class="flex flex-wrap gap-1.5">
+              @for (t of tools; track t) {
+                <span class="text-xs px-2.5 py-1 rounded bg-white/5 border border-white/10 text-gray-400">{{ t }}</span>
+              }
+            </div>
+          </div>
+
+          <!-- Availability -->
+          <div>
+            <h3 class="cv-section-title">Availability</h3>
+            <div class="text-sm text-gray-400 space-y-1">
+              <div>🌍 Remote or Onsite</div>
+              <div>⚡ Available Immediately</div>
+              <div>🕐 GMT+2 (Egypt)</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

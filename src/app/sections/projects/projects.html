@@ -1,0 +1,80 @@
+<section id="projects" class="py-28 bg-zinc-950 text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div data-aos="fade-up" class="mb-16">
+      <p class="section-label">Portfolio</p>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="text-gray-500 mt-4 text-lg max-w-xl">Production-grade Angular applications demonstrating real-world engineering patterns.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-7">
+      @for (project of projects; track project.title; let i = $index) {
+        <div
+          data-aos="zoom-in"
+          [attr.data-aos-delay]="(i % 2) * 100"
+          class="group glass-card rounded-3xl overflow-hidden hover:border-indigo-500/40 hover:-translate-y-2 transition-all duration-500"
+        >
+          <!-- Thumb -->
+          <div class="h-52 relative overflow-hidden"
+               [style.background]="project.thumbBg">
+            <div class="absolute inset-0"
+                 style="background-image: linear-gradient(rgba(79,156,249,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(79,156,249,0.04) 1px,transparent 1px);background-size:30px 30px;"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <div class="text-5xl mb-2 drop-shadow-lg">{{ project.emoji }}</div>
+              <span class="font-mono text-xs text-gray-600 uppercase tracking-widest">Angular SPA</span>
+            </div>
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                 style="background: linear-gradient(to bottom, transparent 60%, rgba(9,13,24,0.95))"></div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-8">
+            <div class="font-mono text-xs text-indigo-500 mb-2 tracking-wider">
+              {{ (i + 1).toString().padStart(2,'0') }}{{ project.featured ? ' — FEATURED' : '' }}
+            </div>
+            <h3 class="text-2xl font-bold font-syne mb-3 group-hover:text-indigo-400 transition-colors">
+              {{ project.title }}
+            </h3>
+            <p class="text-gray-400 leading-7 text-sm mb-5">{{ project.desc }}</p>
+
+            <!-- Feature tags -->
+            <div class="flex flex-wrap gap-2 mb-4">
+              @for (feat of project.features; track feat) {
+                <span class="text-xs px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 font-mono">
+                  {{ feat }}
+                </span>
+              }
+            </div>
+
+            <!-- Tech tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              @for (tech of project.stack; track tech) {
+                <span class="text-xs px-3 py-1 rounded bg-white/5 border border-white/10 text-gray-400 font-mono">
+                  {{ tech }}
+                </span>
+              }
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex gap-3">
+              <a [href]="project.github" target="_blank"
+                 class="flex-1 btn-ghost py-2.5 rounded-xl text-sm font-medium text-center">
+                ⌥ GitHub
+              </a>
+              @if (project.live) {
+                <a [href]="project.live" target="_blank"
+                   class="flex-1 btn-glow py-2.5 rounded-xl text-sm font-semibold text-white text-center">
+                  Live Demo ↗
+                </a>
+              } @else {
+                <span class="flex-1 py-2.5 rounded-xl text-sm text-center text-gray-600 border border-white/5 cursor-default">
+                  Coming Soon
+                </span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
