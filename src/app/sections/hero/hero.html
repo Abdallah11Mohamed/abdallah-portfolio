@@ -1,97 +1,144 @@
-<section id="home" class="min-h-screen flex items-center text-white pt-16 overflow-hidden relative">
-
-  <!-- Extra orb bottom-right -->
-  <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+<section id="home" class="min-h-screen flex items-center bg-[#f8fafc] text-[#111827] pt-24 overflow-hidden">
 
   <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-16 items-center py-20">
 
-    <!-- LEFT -->
-    <div data-aos="fade-right" data-aos-duration="900">
+    <!-- LEFT CONTENT -->
+    <div data-aos="fade-right" data-aos-duration="800">
 
-      <!-- Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/25 bg-indigo-500/10 text-indigo-300 text-sm mb-8 font-mono">
-        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
-        Angular Frontend Developer · Open to Remote
+      <!-- Small Badge -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 bg-white text-gray-600 text-sm mb-8 shadow-sm">
+
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+
+        Angular Frontend Developer
       </div>
 
-      <!-- Headline -->
-      <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.03] mb-6 tracking-tight font-syne">
-        Building<br>
-        <span class="gradient-text">Angular</span><br>
-        Experiences.
+      <!-- Heading -->
+      <h1
+        class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight max-w-3xl mb-6">
+
+        Hi, I'm
+        <span class="text-cyan-600">Abdallah</span>
+
+        <br>
+
+        I build clean modern
+        web experiences.
       </h1>
 
       <!-- Description -->
-      <p class="text-gray-400 text-lg leading-9 max-w-xl mb-8">
-        Hi, I'm <span class="text-white font-semibold">Abdallah Mohamed Elgohary</span> — a frontend engineer specializing in scalable Angular v21 SPAs, reactive state with RxJS & Signals, and modern component-driven UIs.
+      <p class="text-gray-600 text-lg leading-8 max-w-2xl mb-10">
+
+        Frontend developer focused on building scalable Angular applications
+        with clean UI, responsive design, and modern frontend architecture.
+
       </p>
 
-      <!-- Stack Tags -->
+      <!-- Tech Stack -->
       <div class="flex flex-wrap gap-3 mb-10">
+
         @for (tag of stackTags; track tag) {
-          <span class="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm text-gray-300 font-mono hover:border-indigo-500/40 hover:text-indigo-300 transition cursor-default">
+
+          <span
+            class="px-4 py-2 rounded-full border border-gray-200 bg-white text-sm text-gray-700 hover:border-cyan-400 hover:text-cyan-600 transition">
+
             {{ tag }}
+
           </span>
+
         }
+
       </div>
 
       <!-- Buttons -->
-      <div class="flex flex-wrap gap-4">
-        <a href="#projects" class="btn-glow px-7 py-4 rounded-2xl font-semibold text-white">
-          View Projects ↓
+      <div class="flex flex-wrap gap-4 mb-10">
+
+        <!-- Projects -->
+        <a
+          href="#projects"
+          class="px-7 py-4 rounded-2xl bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition shadow-sm">
+
+          View Projects
+
         </a>
-        <a href="#cv" class="btn-ghost px-7 py-4 rounded-2xl font-medium">
-          📄 Download CV
+
+        <!-- CV -->
+        <a
+          href="#cv"
+          class="px-7 py-4 rounded-2xl border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition">
+
+          Download CV
+
         </a>
-        <a href="https://github.com/Abdallah11Mohamed" target="_blank" class="btn-ghost px-6 py-4 rounded-2xl font-medium">
-          GitHub
+
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex items-center gap-4">
+
+        <!-- Facebook -->
+        <a
+          href="https://www.facebook.com/share/1H8jc56usV/"
+          target="_blank"
+          class="w-12 h-12 rounded-2xl border border-gray-200 bg-white flex items-center justify-center hover:bg-gray-100 transition shadow-sm">
+
+          <i class="fa-brands fa-facebook-f text-lg text-gray-700"></i>
+
         </a>
-        <a href="https://www.linkedin.com/in/abdallah-mohamed-5814772a5" target="_blank" class="btn-ghost px-6 py-4 rounded-2xl font-medium">
-          LinkedIn
+
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/201272320465"
+          target="_blank"
+          class="w-12 h-12 rounded-2xl border border-gray-200 bg-white flex items-center justify-center hover:bg-gray-100 transition shadow-sm">
+
+          <i class="fa-brands fa-whatsapp text-lg text-gray-700"></i>
+
         </a>
+
+        <!-- GitHub -->
+        <a
+          href="https://github.com/Abdallah11Mohamed"
+          target="_blank"
+          class="w-12 h-12 rounded-2xl border border-gray-200 bg-white flex items-center justify-center hover:bg-gray-100 transition shadow-sm">
+
+          <i class="fa-brands fa-github text-lg text-gray-700"></i>
+
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/abdallah-mohamed-5814772a5"
+          target="_blank"
+          class="w-12 h-12 rounded-2xl border border-gray-200 bg-white flex items-center justify-center hover:bg-gray-100 transition shadow-sm">
+
+          <i class="fa-brands fa-linkedin-in text-lg text-gray-700"></i>
+
+        </a>
+
       </div>
 
     </div>
 
-    <!-- RIGHT: Avatar Card -->
-    <div data-aos="fade-left" data-aos-duration="900" class="hidden lg:flex justify-center relative">
+    <!-- RIGHT IMAGE -->
+    <div
+      data-aos="fade-left"
+      data-aos-duration="800"
+      class="flex justify-center">
 
-      <div class="relative">
-        <!-- Floating chips -->
-        <div class="absolute -top-4 -right-12 px-4 py-2 rounded-xl border border-white/10 bg-zinc-900/90 text-sm text-gray-300 backdrop-blur animate-bounce z-10">⚡ RxJS Streams</div>
-        <div class="absolute bottom-14 -left-14 px-4 py-2 rounded-xl border border-white/10 bg-zinc-900/90 text-sm text-gray-300 backdrop-blur animate-pulse z-10">🔒 JWT Auth</div>
+      <div
+        class="relative w-[320px] h-[420px] rounded-[32px] overflow-hidden bg-white border border-gray-200 shadow-xl">
 
-        <!-- Glow -->
-        <div class="absolute inset-0 bg-indigo-500/15 blur-3xl rounded-full scale-110 pointer-events-none"></div>
+        <img
+          src="/profile.png.jpeg"
+          alt="Abdallah Mohamed Elgohary"
+          class="w-full h-full object-cover" />
 
-        <!-- Card -->
-        <div class="relative w-[300px] h-[380px] rounded-[2rem] border border-white/10 bg-zinc-950/80 backdrop-blur-xl overflow-hidden card-shine flex flex-col items-center justify-center gap-5 p-8">
-          <!-- Top line -->
-          <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/60 to-transparent"></div>
-
-          <!-- Photo -->
-          <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-indigo-500/40 shadow-lg shadow-indigo-500/20">
-            <img src="/profile.png.jpeg" alt="Abdallah Mohamed Elgohary" class="w-full h-full object-cover" />
-          </div>
-
-          <div class="text-center">
-            <h3 class="text-xl font-bold text-white font-syne">Abdallah Elgohary</h3>
-            <p class="text-gray-400 text-sm mt-1">Angular Frontend Developer</p>
-          </div>
-
-          <div class="flex flex-wrap justify-center gap-2">
-            <span class="skill-chip">Angular v21</span>
-            <span class="skill-chip">RxJS</span>
-            <span class="skill-chip">TypeScript</span>
-          </div>
-
-          <div class="flex items-center gap-2 text-sm text-emerald-400">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            Available for opportunities
-          </div>
-        </div>
       </div>
+
     </div>
 
   </div>
+
 </section>

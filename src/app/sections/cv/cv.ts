@@ -8,8 +8,26 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cv.scss'
 })
 export class Cv {
-  angularSkills = ['Angular v21', 'TypeScript', 'RxJS', 'Signals', 'Route Guards', 'Interceptors', 'Reactive Forms', 'Lazy Loading', 'JWT Auth', 'REST APIs', 'Standalone Components', 'CRUD'];
-  tools = ['Git', 'GitHub', 'Postman', 'Swagger', 'VS Code', 'Figma'];
+ angularSkills = [
+'Angular',
+'TypeScript',
+'RxJS',
+'Signals',
+'Reactive Forms',
+'REST APIs',
+'HTML',
+'CSS',
+'SCSS',
+'Tailwind CSS',
+'Bootstrap'
+];
+  tools = [
+'Git',
+'GitHub',
+'Postman',
+'VS Code',
+'Figma'
+];
 
   cvProjects = [
     {
