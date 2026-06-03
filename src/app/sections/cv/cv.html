@@ -22,14 +22,6 @@
         technical skills, projects, and education.
       </p>
 
-      <button
-        onclick="window.print()"
-        class="mt-8 px-7 py-4 rounded-2xl bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition">
-
-        Download PDF Resume
-
-      </button>
-
     </div>
 
     <!-- CV Card -->
@@ -135,16 +127,15 @@
               Professional Summary
             </h3>
 
-            <p
-              class="text-gray-600 leading-8 border-l-4 border-cyan-500 pl-5">
+           <p class="text-gray-600 leading-8 border-l-4 border-cyan-500 pl-5">
 
-              Angular Frontend Developer with practical experience building responsive web applications using Angular, TypeScript, RxJS, and REST APIs.
+  Angular Frontend Developer and Computer Science graduate with hands-on experience building responsive web applications using Angular, TypeScript, RxJS, and REST APIs.
 
-              Developed multiple real-world projects including online examination, e-commerce, social media, and hotel booking applications.
+  Experienced in authentication systems, API integration, and scalable frontend architecture through real-world projects.
 
-              Passionate about building clean user interfaces, maintainable frontend architecture, and continuously improving development skills.
+  Passionate about building clean user interfaces and continuously improving frontend development skills.
 
-            </p>
+</p>
 
           </div>
 
@@ -169,14 +160,35 @@
                       {{ proj.name }}
                     </h4>
 
-                    <a
-                      [href]="proj.github"
-                      target="_blank"
-                      class="text-cyan-600 text-sm font-medium">
+                <div class="flex gap-4">
 
-                      GitHub →
+<div class="flex items-center gap-3">
 
-                    </a>
+  <a
+    [href]="proj.live"
+    target="_blank"
+    class="text-cyan-600 text-sm font-medium hover:underline">
+
+    Live Demo ↗
+
+  </a>
+
+  <span class="text-gray-300">|</span>
+
+  <a
+    [href]="proj.github"
+    target="_blank"
+    class="text-gray-600 text-sm font-medium hover:text-cyan-600">
+
+    Repository
+
+  </a>
+
+</div>
+
+
+
+</div>
 
                   </div>
 
@@ -215,34 +227,16 @@
 
           <!-- Education -->
 
-          <div>
+          <div class="text-gray-600 mt-1">
+  Bachelor of Science in Computer Science
+</div>
 
-            <h3 class="font-semibold text-lg mb-4">
-              Education
-            </h3>
+<div
+  class="inline-block mt-3 px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs">
 
-            <div
-              class="p-5 rounded-2xl border border-gray-200">
+  Graduated: 2025
 
-              <div class="font-semibold">
-                Arab Open University
-              </div>
-
-              <div class="text-gray-600 mt-1">
-                B.Sc. Computer Science
-              </div>
-
-              <div
-                class="inline-block mt-3 px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs">
-
-                Class of 2025
-
-              </div>
-
-            </div>
-
-          </div>
-
+</div>
           <!-- Certification -->
 
           <div>
@@ -293,28 +287,25 @@
 
           <!-- Tools -->
 
-          <div>
+      <div>
 
-            <h3 class="font-semibold text-lg mb-4">
-              Tools
-            </h3>
+  <h3 class="font-semibold text-lg mb-4">
+    Methodologies
+  </h3>
 
-            <div class="flex flex-wrap gap-2">
+  <div class="flex flex-wrap gap-2">
 
-              @for (t of tools; track t) {
+    <span class="px-3 py-2 rounded-xl border border-gray-200 bg-white text-sm">
+      Agile
+    </span>
 
-                <span
-                  class="px-3 py-2 rounded-xl border border-gray-200 bg-white text-sm">
+    <span class="px-3 py-2 rounded-xl border border-gray-200 bg-white text-sm">
+      Scrum
+    </span>
 
-                  {{ t }}
+  </div>
 
-                </span>
-
-              }
-
-            </div>
-
-          </div>
+</div>
 
         </div>
 

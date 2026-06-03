@@ -1,0 +1,33 @@
+.mini-marquee {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  animation: scrollSkills 25s linear infinite;
+}
+
+.mini-marquee:hover {
+  animation-play-state: paused;
+}
+
+.mini-marquee span {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+@keyframes scrollSkills {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}

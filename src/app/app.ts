@@ -8,10 +8,11 @@ import { Cv        } from './sections/cv/cv';
 import { Contact   } from './sections/contact/contact';
 import { Footer    } from './sections/footer/footer';
 import AOS from 'aos';
+import { Services } from "./core/services/services";
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Hero, About, Skills, Projects, Cv, Contact, Footer],
+  imports: [Navbar, Hero, About, Skills, Projects, Cv, Contact, Footer, Services],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

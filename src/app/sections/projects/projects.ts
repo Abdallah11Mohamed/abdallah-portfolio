@@ -9,116 +9,44 @@ import { CommonModule } from '@angular/common';
 })
 export class Projects {
 
-  projects = [
+projects = [
 
-    {
-      title: 'Online Exam System',
+  {
+    title: 'Online Exam System',
+    desc: 'Full online examination platform featuring authentication, timed exams, progress tracking, dynamic questions, and responsive dashboards.',
+    image: '/onlineExam.png',
+    stack: ['Angular', 'TypeScript', 'RxJS', 'REST APIs'],
+    github: 'https://github.com/Abdallah11Mohamed/onlineExam',
+    live: 'https://online-exam-mu-gray.vercel.app/'
+  },
 
-      desc:
-        'Angular-based online examination platform with authentication, timed exams, route guards, reactive forms, and responsive dashboards.',
+  {
+    title: 'E-Commerce Platform',
+    desc: 'Modern e-commerce application with product catalog, advanced filtering, cart management, and seamless shopping experience.',
+    image: '/ecommerce.png',
+    stack: ['Angular', 'TypeScript', 'RxJS', 'REST APIs'],
+    github: 'https://github.com/Abdallah11Mohamed/ecommerceProject',
+    live: 'https://ecommerce-project-ia5h.vercel.app/'
+  },
 
-      image: 'assets/projects/exam-project.png',
+  {
+    title: 'Social Media App',
+    desc: 'Social networking platform supporting authentication, posts, comments, CRUD operations, and responsive user interactions.',
+    image: 'social-project.png',
+    stack: ['Angular', 'TypeScript', 'RxJS', 'REST APIs'],
+    github: 'https://github.com/Abdallah11Mohamed/social-app',
+    live: "https://social-app-two-phi.vercel.app/"
+  },
 
-      stack: [
-        'Angular',
-        'TypeScript',
-        'RxJS',
-        'Bootstrap'
-      ],
+  {
+    title: 'Yummy Recipe App',
+    desc: 'Recipe discovery application powered by external APIs with dynamic search, categories, and responsive layouts.',
+    image: '/yummy.png',
+    stack: ['html', 'css', 'js',"bootstrap"],
+    github: 'https://github.com/Abdallah11Mohamed/yummy',
+    live: "https://yummy-weld.vercel.app/"
+  }
 
-      github:
-        'https://github.com/Abdallah11Mohamed/onlineExam',
-
-      live:
-        'https://online-exam-mu-gray.vercel.app/'
-    },
-
-    {
-      title: 'E-Commerce Platform',
-
-      desc:
-        'Modern e-commerce application with product browsing, filtering, cart management, and responsive shopping experience.',
-
-      image: 'assets/projects/ecommerce-project.png',
-
-      stack: [
-        'Angular',
-        'TypeScript',
-        'RxJS',
-        'REST APIs'
-      ],
-
-      github:
-        'https://github.com/Abdallah11Mohamed/ecommerceProject',
-
-      live:
-        'https://ecommerce-project-ia5h.vercel.app/'
-    },
-
-    {
-      title: 'Social Media App',
-
-      desc:
-        'Social platform featuring authentication, posts, comments, CRUD operations, and responsive UI with API integration.',
-
-      image: 'assets/projects/social-project.png',
-
-      stack: [
-        'Angular',
-        'TypeScript',
-        'RxJS',
-        'REST APIs'
-      ],
-
-      github:
-        'https://github.com/Abdallah11Mohamed/social-app',
-
-      live:
-        null
-    },
-
-    {
-      title: 'QuickStay Hotel Booking',
-
-      desc:
-        'Hotel booking frontend focused on clean UI, booking flows, API integration, and responsive user experience.',
-
-      image: 'assets/projects/hotel-project.png',
-
-      stack: [
-        'Angular',
-        'TypeScript',
-        'Bootstrap'
-      ],
-
-      github:
-        'https://github.com/Abdallah11Mohamed/QuickStay-FullStack',
-
-      live:
-        null
-    },
-
-    {
-      title: 'Yummy Recipe App',
-
-      desc:
-        'Recipe discovery application consuming external APIs with dynamic search, reusable components, and responsive layouts.',
-
-      image: 'assets/projects/yummy-project.png',
-
-      stack: [
-        'Angular',
-        'Bootstrap',
-        'REST APIs'
-      ],
-
-      github:
-        'https://github.com/Abdallah11Mohamed/yummy',
-
-      live:
-        null
-    }
-
-  ];
+];
 
 }

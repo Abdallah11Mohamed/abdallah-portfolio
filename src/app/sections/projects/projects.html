@@ -1,109 +1,62 @@
-<section
-  id="projects"
-  class="py-28 bg-white text-[#111827] border-t border-gray-200">
+<section id="projects" class="py-24 bg-white border-t border-slate-200">
 
   <div class="max-w-7xl mx-auto px-6">
 
     <!-- Header -->
-    <div class="mb-24">
+    <div class="text-center mb-16">
 
-      <p class="text-cyan-600 font-medium mb-4">
-        Projects
-      </p>
+      <span class="text-cyan-600 font-semibold tracking-wide">
+        Featured Projects
+      </span>
 
-      <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-        Selected work & recent projects.
+      <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mt-4 mb-5">
+        Things I've Built
       </h2>
 
-      <p class="text-lg text-gray-600 max-w-2xl leading-8">
-        Frontend projects focused on clean UI, scalability,
-        responsive design, and modern Angular architecture.
+      <p class="max-w-2xl mx-auto text-gray-600 leading-8">
+        Real-world Angular applications focused on scalability,
+        responsive design, authentication, API integration,
+        and modern frontend architecture.
       </p>
 
     </div>
 
-    <!-- Projects -->
-    <div class="flex flex-col gap-32">
+    <!-- Projects Grid -->
+    <div class="grid lg:grid-cols-2 gap-8">
 
-      @for (project of projects; track project.title; let i = $index) {
+      @for (project of projects; track project.title) {
 
         <div
-          class="grid lg:grid-cols-2 gap-14 items-center">
+          class="group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
 
-          <!-- IMAGE -->
-          <div
-            [class.order-2]="i % 2 !== 0"
-            [class.order-1]="i % 2 === 0"
-            class="relative group">
+          <!-- Project Image -->
+          <div class="overflow-hidden">
 
-            <!-- Number -->
-            <span
-              class="absolute -top-10 left-0 text-7xl font-bold text-gray-100 pointer-events-none">
-
-              0{{ i + 1 }}
-
-            </span>
-
-            <!-- Preview -->
-            <div
-              class="relative overflow-hidden rounded-[32px] border border-gray-200 bg-[#f8fafc] shadow-sm">
-
-              <div
-                class="h-[320px] flex items-center justify-center bg-gradient-to-br from-cyan-50 to-white">
-
-                <div
-                  class="text-center px-8">
-
-                  <div
-                    class="w-20 h-20 mx-auto rounded-3xl bg-white border border-gray-200 shadow-sm flex items-center justify-center mb-6">
-
-                    <i class="fa-solid fa-layer-group text-3xl text-cyan-600"></i>
-
-                  </div>
-
-                  <h3 class="text-2xl font-bold mb-3">
-                    {{ project.title }}
-                  </h3>
-
-                  <p class="text-gray-500 leading-7">
-                    Modern Angular application with clean UI and responsive experience.
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
+            <img
+              [src]="project.image"
+              [alt]="project.title"
+              class="w-full h-[280px] object-cover object-top transition duration-500 group-hover:scale-105">
 
           </div>
 
-          <!-- CONTENT -->
-          <div
-            [class.order-1]="i % 2 !== 0"
-            [class.order-2]="i % 2 === 0">
+          <!-- Content -->
+          <div class="p-7">
 
-            <!-- Label -->
-            <p class="text-cyan-600 font-medium mb-4">
-              Featured Project
-            </p>
-
-            <!-- Title -->
-            <h3 class="text-4xl font-bold tracking-tight mb-6">
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">
               {{ project.title }}
             </h3>
 
-            <!-- Description -->
-            <p class="text-lg text-gray-600 leading-9 mb-8">
+            <p class="text-gray-600 leading-7 mb-6">
               {{ project.desc }}
             </p>
 
             <!-- Stack -->
-            <div class="flex flex-wrap gap-3 mb-10">
+            <div class="flex flex-wrap gap-2 mb-6">
 
               @for (tech of project.stack; track tech) {
 
                 <span
-                  class="px-4 py-2 rounded-full border border-gray-200 bg-gray-50 text-sm text-gray-700">
+                  class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm">
 
                   {{ tech }}
 
@@ -114,29 +67,33 @@
             </div>
 
             <!-- Buttons -->
-            <div class="flex flex-wrap gap-4">
+            <div class="flex gap-3">
 
-              <!-- GitHub -->
               <a
                 [href]="project.github"
                 target="_blank"
-                class="px-6 py-3 rounded-2xl border border-gray-200 bg-white text-gray-700 font-medium hover:bg-gray-50 transition">
+                class="flex-1 text-center py-3 rounded-xl border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition">
 
                 GitHub
-
               </a>
 
-              <!-- Live -->
-              @if (project.live) {
+              @if(project.live){
 
                 <a
                   [href]="project.live"
                   target="_blank"
-                  class="px-6 py-3 rounded-2xl bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition">
+                  class="flex-1 text-center py-3 rounded-xl bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition">
 
                   Live Demo
-
                 </a>
+
+              } @else {
+
+                <span
+                  class="flex-1 text-center py-3 rounded-xl bg-slate-100 text-slate-400 cursor-not-allowed">
+
+                  Private Project
+                </span>
 
               }
 

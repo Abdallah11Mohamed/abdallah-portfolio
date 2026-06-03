@@ -8,21 +8,59 @@ import { CommonModule } from '@angular/common';
   styleUrl: './skills.scss'
 })
 export class Skills {
+
   categories = [
     {
-      icon: '🅰️',
+      title: 'Frontend',
+      icon: '💻',
+      skills: [
+        'Angular',
+        'TypeScript',
+        'JavaScript',
+        'HTML5',
+        'CSS3',
+        'SCSS',
+        'Bootstrap',
+        'Tailwind CSS'
+      ]
+    },
+
+    {
       title: 'Angular Ecosystem',
-      skills: ['Angular v21', 'TypeScript', 'RxJS', 'Signals', 'Route Guards', 'Interceptors', 'Reactive Forms', 'Lazy Loading', 'Standalone Components', 'REST API Integration', 'JWT Auth', 'CRUD Operations']
+      icon: '⚡',
+      skills: [
+        'RxJS',
+        'Signals',
+        'Reactive Forms',
+        'Route Guards',
+        'Interceptors',
+        'Lazy Loading',
+        'NgRx'
+      ]
     },
+
     {
-      icon: '🌐',
-      title: 'Frontend Core',
-      skills: ['HTML5', 'CSS3', 'JavaScript ES6+', 'SCSS / SASS', 'Bootstrap 5', 'Tailwind CSS', 'Responsive Design']
-    },
-    {
+      title: 'Tools',
       icon: '🛠️',
-      title: 'Tools & Workflow',
-      skills: ['Git', 'GitHub', 'Postman', 'Swagger', 'Figma', 'VS Code']
+      skills: [
+        'Git',
+        'GitHub',
+        'Postman',
+        'Swagger',
+        'Figma',
+        'VS Code',
+        
+      ]
+    },
+
+    {
+      title: 'Methodologies',
+      icon: '📋',
+      skills: [
+        'Agile',
+        'Scrum'
+      ]
     }
   ];
+
 }

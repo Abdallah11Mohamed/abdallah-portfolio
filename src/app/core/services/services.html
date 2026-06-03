@@ -1,0 +1,50 @@
+<section id="services" class="py-24 bg-[#f8fafc] border-t border-gray-200">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+
+      <p class="text-cyan-600 font-medium mb-4">
+        Services
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-bold text-[#111827] mb-6">
+        What I Can Do
+      </h2>
+
+      <p class="max-w-2xl mx-auto text-gray-600 text-lg leading-8">
+        Building modern Angular applications with a focus on scalability,
+        performance and clean user experiences.
+      </p>
+
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+      @for(service of services; track service.title) {
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          <i [class]="service.icon"></i>
+        </div>
+
+        <h3>
+          {{ service.title }}
+        </h3>
+
+        <p>
+          {{ service.description }}
+        </p>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
