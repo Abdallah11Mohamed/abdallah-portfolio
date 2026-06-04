@@ -32,7 +32,7 @@ projects = [
   {
     title: 'Social Media App',
     desc: 'Social networking platform supporting authentication, posts, comments, CRUD operations, and responsive user interactions.',
-    image: 'social-project.png',
+    image: '/socialApp.png',
     stack: ['Angular', 'TypeScript', 'RxJS', 'REST APIs'],
     github: 'https://github.com/Abdallah11Mohamed/social-app',
     live: "https://social-app-two-phi.vercel.app/"
